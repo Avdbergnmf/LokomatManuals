@@ -4,6 +4,10 @@ The manuals for all components of the Lokomat system. This does not include the 
 - [Lokomat Brochure](Other/Lokomat_Brochure.pdf)
 - [Lokomat FreeD Brochure](Other/Lokomat_FreeD_Brochure.pdf)
 
+Everything is connected through Ethernet, with the exception of 2 (connected through serial):
+- The PixArt camera  
+- The connections between LinMot driver and motor  
+
 > Note: **?** Questionmarks indicate unclear parts which need to be looked into further.
 
 ## Overall structure
@@ -15,7 +19,7 @@ The manuals for all components of the Lokomat system. This does not include the 
         - 4x [B1150](Manuals/LinMot_B1150_B8050.pdf) (drivers)  
         - 4x [HS01-48x250](LinMot_HS01-48x250.pdf) (guides)  
         - 4x [S01-72/500](Manuals/LinMot_S01-72_500.pdf) (transformers)  
-        - 4x [WPS-1250-MK46-P10](Manuals/MICRO_EPSILON_WPS-1250-MK46-P10.pdf) (potentiometers for position)
+        - 4x [WPS-1250-MK46-P10](Manuals/MICRO_EPSILON_WPS-1250-MK46-P10.pdf) (potentiometers for calibration)
             - 4x [EL3255](Manuals/Backhoff_el3255en.pdf) (input terminals for potentiometers)
 - **Pelvis**: there's a plate with passive compliance (spring) in 5 DOF and actuated in 1 DOF. It's position+velocity are measured using external sensors.
     > Note: This motor is currently not working
@@ -24,10 +28,10 @@ The manuals for all components of the Lokomat system. This does not include the 
         - 1x [EC1250-EC-UC](Manuals/LinMot_EC1250-EC-UC) (driver)
         - 1x [HS01-48x250](LinMot_HS01-48x250.pdf) (guide)  
         - 1x [S01-72/500](Manuals/LinMot_S01-72_500.pdf) (transformer)  
-        - **?** [Sensofoil potentiometer (exact model unknown)](Manuals/Hoffman_Krippner_2020_Sensofoil_Produktinfo.pdf)  
+        - **?** [Sensofoil potentiometer (exact model unknown)](Manuals/Hoffman_Krippner_2020_Sensofoil_Produktinfo.pdf) (for calibration)  
             - 1x [EL3255](Manuals/Backhoff_el3255en.pdf) (input terminal for potentiometer)
     - [MPU9250](Manuals/Invensense_MPU9250.pdf) (IMU)
-    - **?** [Pixart IR motion camera](https://www.pixart.com/) (for finding the position)
+    - **?** [Pixart IR motion camera](https://www.pixart.com/) (for finding the position of the plate)
 - **Knee**: Knee actuation is part of the original Lokomat
     - 2x knee potentiometer (part of original lokomat)
         - 2x [EL3102](Manuals/Beckhoff_EL3102.pdf) (input terminals for potentiometers)
@@ -53,11 +57,12 @@ The manuals for all components of the Lokomat system. This does not include the 
 - LinMot Potentiometer (x4), LinMot foil sensor (x1): [EL3255](Manuals/Backhoff_el3255en.pdf) (x5) - Beckhoff [product page](https://www.beckhoff.com/en-en/products/i-o/ethercat-terminals/el3xxx-analog-input/el3255.html)  
 
 ### Sensors  
-- Thigh motor Potentiometer (x4): [WPS-1250-MK46-P10](Manuals/MICRO_EPSILON_WPS-1250-MK46-P10.pdf) - MICRO EPSILON [product page](https://www.micro-epsilon-shop.com/de/wps-1250-mk46-p10-miniatur-seilzug-wegsensor/2625170/) 
-- Pelvis actuator foil potentiometer: [Sensofoil potentiometer (exact model unknown)](Manuals/Hoffman_Krippner_2020_Sensofoil_Produktinfo.pdf)	- Hoffman Krippner [product page](https://www.hoffmann-krippner.com/shop-sensofoil-membrane-potentiometers/)  
-- Pelvis plate IMU: [MPU9250](Manuals/Invensense_MPU9250.pdf) - Invensense [product page](https://invensense.tdk.com/products/motion-tracking/9-axis/mpu-9250/)   
-- Pixart pelvis infrared motion capture cam [company page](https://www.pixart.com/)  
+- Thigh motor Potentiometer (x4): [WPS-1250-MK46-P10](Manuals/MICRO_EPSILON_WPS-1250-MK46-P10.pdf) - MICRO EPSILON [product page](https://www.micro-epsilon-shop.com/de/wps-1250-mk46-p10-miniatur-seilzug-wegsensor/2625170/) - For calibrating motors   
+- Pelvis actuator foil potentiometer: [Sensofoil potentiometer (exact model unknown)](Manuals/Hoffman_Krippner_2020_Sensofoil_Produktinfo.pdf)	- Hoffman Krippner [product page](https://www.hoffmann-krippner.com/shop-sensofoil-membrane-potentiometers/) - For calibrating motors    
+- Pelvis plate IMU: [MPU9250](Manuals/Invensense_MPU9250.pdf) - Invensense [product page](https://invensense.tdk.com/products/motion-tracking/9-axis/mpu-9250/) - For finding pelvis plate position / velocity  
+- Pixart pelvis infrared motion capture cam [company page](https://www.pixart.com/) - For finding pelvis position / velocity   
     - Connected through Serial
+    - Integrated with IMU sensor trough Kalmann filter 
 
 ### xPC  
 Custom build, running on Simulink Windows Target/xPC (Matlab 2013b), in 2015 got [renamed](https://nl.mathworks.com/matlabcentral/answers/99054-what-are-the-differences-between-real-time-windows-target-and-xpc-target) to [Simulink Real-Time](https://nl.mathworks.com/products/simulink-real-time.html). 
