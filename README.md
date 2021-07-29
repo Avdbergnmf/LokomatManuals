@@ -10,7 +10,8 @@ The manuals for all components of the Lokomat system. This does not include the 
 - **Thigh**: Thigh actuators (LinMot motors) for flexion/adduction 
     - 4x [P01-48x240's](Manuals/LinMot_P01-48x240.pdf) (motors)
         > Note: These have built-in position encoders   
-        - 1x [B8050](Manuals/LinMot_B1150_B8050.pdf) (master driver)  
+        - 1x [B8050](Manuals/LinMot_B1150_B8050.pdf) (master driver)
+            > B1150 drives together with the bus modules B8050 are designed for cost optimized, modular multi axes systems with the industrial Ethernet interfaces EtherCAT, Profinet, EthernetIP, Sercos III and Powerlink.  
         - 4x [B1150](Manuals/LinMot_B1150_B8050.pdf) (drivers)  
         - 4x [HS01-48x250](LinMot_HS01-48x250.pdf) (guides)  
         - 4x [S01-72/500](Manuals/LinMot_S01-72_500.pdf) (transformers)  
@@ -41,8 +42,8 @@ The manuals for all components of the Lokomat system. This does not include the 
     - Power Transformer (x5): [S01-72/500](Manuals/LinMot_S01-72_500.pdf) - LinMot [product page](https://shop.linmot.com/index.php?S01-72-500&page=productDetails&productNo=0150-1874&pageType=&source=search&language=E)  
 
 ### Motor Drivers  
-- Thigh: [B8050](Manuals/LinMot_B1150_B8050.pdf) (1x) - LinMot  
-- Thigh: [B1150](Manuals/LinMot_B1150_B8050.pdf) (4x) - LinMot  
+- Thigh: [B8050](Manuals/LinMot_B1150_B8050.pdf) (1x) - LinMot [servo drives info](https://linmot.com/products/servo-drives/)  
+- Thigh: [B1150](Manuals/LinMot_B1150_B8050.pdf) (4x) - LinMot [servo drives info](https://linmot.com/products/servo-drives/)  
 - Pelvis: [EC1250-EC-UC](Manuals/LinMot_EC1250-EC-UC) (1x) - LinMot [product page](https://shop.linmot.com/E/ag7000.e12/servo-drives/drives-for-motors-p0x-&-pr0x/series-e1200/e1250-ec-uc.htm)  
 - Knee Motors: [ADS_E 50-10, 4-Q-DC](Manuals/MAXON_ADS_E_5010_4-Q-DC.pdf) (x3) - MAXON Motors  
     - [Operating Instructions](Manuals/MAXON_168049-ADS-E-50-10-Operating-Instructions-En.pdf)
@@ -70,3 +71,16 @@ Custom build, running on Simulink Windows Target/xPC (Matlab 2013b), in 2015 got
 - Graphics Card: [GeForce4 MX 4000](Manuals/NVIDIA_geforce4_mx_series.pdf) - NVIDIA [product page](https://www.techpowerup.com/gpu-specs/geforce4-mx-4000.c776)  
 - Ethernet Port 1 - Connected to IMU on pelvis plate: [PCI Card](https://www.jr3.com/resources/product-manuals) - JR3 [product page](https://www.jr3.com/resources/product-manuals)
 - Ethernet Port 2+3 - ??? : [pro/100 S server adapter](Manuals/Intel_Ethernet_Adapter_User_Guide.pdf) (x2) - Intel [product page](https://downloadcenter.intel.com/product/50466/Intel-PRO-100-S-Server-Adapter)
+
+## Schematics
+
+### Lokomat Electrical  
+![Lokomat electrical scheme](Other/Lokomat_electrical_scheme.png)
+
+### LinMot Ethernet  
+![LinMot ethernet](Other/LinMot_ethernet.png)
+
+### xPC Layout
+![xPC Layout Side](Other/xPC_Layout.png)
+
+![xPC Top View](Other/xPC_Top_View.png)
