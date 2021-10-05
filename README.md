@@ -41,7 +41,7 @@ Everything is connected through Ethernet, with the exception of 2 (connected thr
 ## System Components
 
 ### Motors  
-- Thigh (x4), Pelvis (x1):  [P01-48x240](Manuals/LinMot_P01-48x240.pdf) (5x) - LinMot [product page](https://shop.linmot.com/E/linear-motors/linear-motors-p01-48/stators-ps01-48x240/ps01-48x240-c.htm) (have built in position encoders)  
+- Thigh (x4), Pelvis (x1):  [P01-48x240-C](Manuals/LinMot_P01-48x240.pdf) (5x) - LinMot [product page](https://shop.linmot.com/E/linear-motors/linear-motors-p01-48/stators-ps01-48x240/ps01-48x240-c.htm) (have built in position encoders)  
     -  Linear Guides (x5): [HS01-48x250](LinMot_HS01-48x250.pdf) - LinMot [product page](https://shop.linmot.com/E/ag3000.48.1h/linear-guides-&-modules/linear-guides-h/linear-guides-h01-48/h01-48x250-120.htm)  
     - Power Transformer (x5): [S01-72/500](Manuals/LinMot_S01-72_500.pdf) - LinMot [product page](https://shop.linmot.com/index.php?S01-72-500&page=productDetails&productNo=0150-1874&pageType=&source=search&language=E)  
 
